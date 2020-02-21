@@ -49,8 +49,8 @@ var state = {
 	get currentHand() {
 		return state.currentPlayer.hand;
 	},
-	drawPile: null,
-	discardPile: pile,
-	canPlay: false,
+	drawPile: pile,
+	discardPile: {},
+	canPlay: true,
 	testHand: []
 }

@@ -14,12 +14,12 @@ Vue.component('castle-banners', {
 		<!-- Food -->
 		<img class="food-icon" src="svg/food-icon.svg"/>
 		<bubble type="food" :value="player.food" :ratio="foodRatio" />
-		<banner-bar class="food-bar" :color="#288339" :ratio="foodRatio"/>
+		<banner-bar class="food-bar" color="#288339" :ratio="foodRatio"/>
 
 		<!-- Health -->
 		<img class="health-icon" src="svg/health-icon.svg"/>
 		<bubble type="health" :value="player.health" :ratio="healthRatio" />
-		<banner-bar class="health-bar" :color="#9B2E2E" :ratio="healthRatio"/>
+		<banner-bar class="health-bar" color="#9B2E2E" :ratio="healthRatio"/>
 	</div>
 	`,
 	props: ['player'],
@@ -76,7 +76,7 @@ Vue.component('banner-bar', {
 			new TWEEN.Tween({ value: oldValue })
 				.easing(TWEEN.Easing.Cubic.InOut)
 				.to({ value: newValue }, 500)
-				.onUpdate(() => {
+				.onUpdate(function () {
 					vm.height = this.value.toFixed(0)
 				})
 				.start();
