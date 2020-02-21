@@ -1,0 +1,10 @@
+ 
+node_modules/
+svg/
+package-lock.json
+
+# Log files
+npm-debug.log*
+
+
+

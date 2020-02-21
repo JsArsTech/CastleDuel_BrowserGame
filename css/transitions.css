@@ -1,0 +1,63 @@
+
+.hand-enter-active,
+.hand-leave-active {
+	transition: opacity .5s;
+}
+
+.hand-enter,
+.hand-leave-to {
+	opacity: 0;
+}
+
+.hand-enter-active .wrapper,
+.hand-leave-active .wrapper {
+	transition: transform .8s cubic-bezier(.08, .74, .34,1);
+	transform-origin: bottom center;
+}
+
+.hand-enter .wrapper,
+.hand-leave-to .wrapper {
+	transform: rotateX(90deg);
+}
+
+.hand-enter-active .card,
+.hand-leave-active .card {
+	transition: margin .8s cubic-bezier(.08,.74,.34,1);
+}
+
+.hand-enter .card,
+.hand-leave-to .card {
+	margin: 0 -100px;
+}
+
+.card-move {
+	transition: all .3s;
+}
+
+.card-enter {
+	opacity: 0;
+	transform: scale(.8) translateX(100px);
+}
+
+.card-leave-active {
+	transition: all 1s, opacity .5s .5s;
+	position: absolute !important;
+	z-index: 10;
+	poiter-events: none;
+}
+
+.card-leave-to {
+	opacity: 0;
+	transform: translateX(-106px) translateY(-300px) scale(1.5);
+}
+
+.zoom-enter-active,
+.zoom-leave-active {
+	transition: opacity .3s, transform .3s;	
+}
+
+.zoom-enter,
+.zoom-leave-to {
+	opacity: 0;
+	transition: scale(.7);
+}
